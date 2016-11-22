@@ -53,7 +53,7 @@ export default class PartialTable extends Component {
           </div>
         </div>
         <Table
-          className="table table-bordered"
+          className="table"
           dataArray={page}
           columns={columns}
           keys={keys}
