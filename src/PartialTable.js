@@ -7,13 +7,17 @@ export default class PartialTable extends Component {
   render() {
     const {
       onFilter, onPageSizeChange, onPageNumberChange, onSort,
-      pageLengthOptions, columns, keys, buildRowOptions,
+      pageLengthOptions, columns, keys, buildRowOptions
     } = this.props;
+
+    let { tableClassName } = this.props;
 
     const {
       page, pageSize, pageNumber,
       totalPages, sortBy, filterValues,
     } = this.props.data;
+
+    if (typeof tableClassName === 'undefined') return 'table';
 
     return (
       <div className="container">
@@ -53,7 +57,7 @@ export default class PartialTable extends Component {
           </div>
         </div>
         <Table
-          className="table"
+          className={tableClassName}
           dataArray={page}
           columns={columns}
           keys={keys}
