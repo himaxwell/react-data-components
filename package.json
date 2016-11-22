@@ -17,6 +17,10 @@
     "dist",
     "src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/himaxwell/react-data-components"
+  },
   "dependencies": {
     "lodash": "^4.13.1"
   },
